@@ -18,7 +18,7 @@
 
 
 
-
+'''
 # Get user input
 userinput = input("What is your word or phrase?")
 print(userinput)
@@ -59,9 +59,42 @@ print(word[8])
 
 # Create a variable to capture the first letter of this string
 greeting = 'whatssup!'
-first_position = greeting[0]
+first_position = greeting[0]'''
 
-# Grab the last letter in a variable
+'''# Grab the last letter in a variable
 last_position = greeting[len[-1]]
 
-print(last_position)
+print(last_position)'''
+
+
+
+
+
+# Get input
+email = input("Hello, please add your email:")
+print(email)
+
+# Clean data using strip
+email = email.strip()
+
+print(email)
+print(len(email))
+
+# Test 1. It has a "." at the third-to-last index - amarfeo@hotmail.comm
+test_1 = (email[-4] == '.')
+print(f'Test 1: Does {email} has a "." at the third-to-last index', test_1)
+
+# Test 2. It has exactly one "@" symbol, at the fifth-to-last index or earlier
+test_2 = ('@' in email[-5::-1])
+print(test_2)
+
+# Test 3: There is at least one character before the "@" symbol
+test_3 = (email [0] != '@')
+print( f'Test 3: There is at least one character before the "@" symbol in {email}', test_3)
+print(test_3)
+
+# Test 4: It doesn't have any spaces (doesn't contain " ")
+test_4 = (' ' not in email)
+print(f'Test 4:{email} doesn\'t have any spaces (doesn\'t contain " ")', test_4)
+print(test_4)
+
